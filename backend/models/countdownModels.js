@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const userSchema = new mongoose.Schema({
+const countdownSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -8,26 +8,37 @@ const userSchema = new mongoose.Schema({
         minlength: 3,
         maxlength: 50
     },
-    email: {
+    startDate: {
+        type: Date,
+        required: true,
+        trim: true,
+    },
+    endDate: {
+        type: Date,
+        required: true,
+    },
+    startTime: {
         type: String,
         required: true,
         trim: true,
-        minlength: 5,
-        maxlength: 255
     },
-    passwordHash: {
+    endTime: {
+        type: String,
+        required: true,
+    },
+    description: {
         type: String,
         required: true,
         trim: true,
         minlength: 5,
         maxlength: 1024
     },
-    isAdmin: {
+    isPublic: {
         type: Boolean,
         default: false
     }
 });
 
-const User = new mongoose.model('User', userSchema);
+const Countdown = new mongoose.model('Countdown', countdownSchema);
 
-module.exports = User;
+module.exports = Countdown;
