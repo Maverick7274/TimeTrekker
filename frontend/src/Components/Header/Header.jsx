@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import AuthContext from '../../context/AuthContext'
+import Logout from '../Logout/Logout'
 
 function Header() {
 
@@ -64,7 +65,7 @@ function Header() {
                                 </li>
                                 <li><Link>Settings</Link></li>
                                 <li><Link>Dashboard</Link></li>
-                                <li><Link>Logout</Link></li>
+                                <li><Logout/></li>
                             </ul>
                         </div>
 

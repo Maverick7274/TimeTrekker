@@ -5,6 +5,7 @@ import Home from "../Home/Home";
 import SignUp from "../SignUp/SignUp";
 import Login from "../Login/Login";
 import AuthContext from '../../context/AuthContext'
+import CreateCountdown from "../Countdown/CreateCountdown";
 
 function Routers() {
     
@@ -24,6 +25,11 @@ function Routers() {
 
             )}
           <Route path="/" element={<Home />} />
+          
+          {
+            loggedIn && (
+                <Route path="/new" element={<CreateCountdown/>}/>
+            )}
 
         </Routes>
       </div>
