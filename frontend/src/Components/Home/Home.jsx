@@ -21,7 +21,7 @@ function Home() {
 
                         {
                             loggedIn === false && (
-                                <Link to='/signup' className="btn lg:uppercase normal-case font-quicksand text-2xl btn-primary">Get Started</Link>
+                                <label htmlFor="modal" className="btn lg:uppercase normal-case font-quicksand text-2xl btn-primary">Get Started</label>
                         )}
 
                         {

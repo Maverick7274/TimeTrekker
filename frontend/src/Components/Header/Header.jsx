@@ -42,7 +42,7 @@ function Header() {
 
                 {
                     loggedIn === false && (
-                        <Link to='/signup' className="btn">Get started</Link>
+                        <label htmlFor="modal" className="btn lg:flex hidden">Get started</label>
                 
                 )}
 
@@ -71,6 +71,17 @@ function Header() {
 
                 )}
 
+                <input type="checkbox" id="modal" className="modal-toggle" />
+                    <div className="modal">
+                        <div className="modal-box relative">
+                            <label htmlFor="modal" className="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+                            <h1 className="text-3xl font-bold">What do you wish to do?</h1>
+                            <div className='flex justify-center items-center py-[3rem] gap-[2rem]'>
+                                <Link className='btn btn-accent' htmlFor="modal" to='/login'>Login</Link>
+                                <Link className='btn btn-info' htmlFor="modal" to="/signup">Sign Up</Link>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </div>
     </div>
