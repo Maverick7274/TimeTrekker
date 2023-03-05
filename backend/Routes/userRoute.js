@@ -114,4 +114,31 @@ router.get('/logout', (req, res) => {
     }).send();
 });
 
+
+router.get('/loggedIn', (req, res) => {
+
+    try {
+        const token = req.cookies.token;
+        
+        if(!token) {
+            return res.json(false);
+        }
+        const verified = jwt.verify(token, process.env.JWT_SECRET);
+        
+        res.json(true);
+
+    } catch (error) {
+        console.error(error);
+        return res.json(false);
+    }
+});
+
+
+
+
+
+
+
+
+
 module.exports = router;
