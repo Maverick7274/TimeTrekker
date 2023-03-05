@@ -37,7 +37,7 @@ function SignUp() {
   return (
     <div className=''>
         <div className="flex flex-col items-center justify-center h-screen">
-          <div className='lg:mt-[4.5rem] lg:pt-[15rem] pt-[0] pb-[2rem] lg:w-[50%] w-[80%] lg:bg-inherit bg-secondary rounded-[0.23rem]'>
+          <div className='lg:mt-[4.5rem] xl:pt-[15rem] lg:pt-[0] sm:pt-[3rem] pt-[0] pb-[2rem] lg:w-[50%] w-[80%] lg:bg-inherit bg-secondary rounded-[0.23rem]'>
             <div className='lg:py-[3rem] py-[1rem] flex flex-col gap-[1rem]'>
               <h1 className="lg:text-5xl text-3xl text-center font-tilt font-[700]">Sign Up</h1>
               <p className='lg:text-3xl text-l font-quicksand font-[500] text-center'>Create a New Account</p>
